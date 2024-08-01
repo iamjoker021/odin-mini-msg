@@ -35,5 +35,9 @@ app.post('/new', (req, res) => {
     res.redirect('/');
 })
 
+app.get('/message/:id', (req, res) => {
+    res.render('message', {...messages[parseInt(req.params.id)]});
+})
+
 const PORT = 3000;
 app.listen(PORT, () => console.log(`Server running on ${PORT}`));

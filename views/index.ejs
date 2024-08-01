@@ -12,7 +12,10 @@
     </nav>
     <ol>
         <% for (let i=0; i < messages.length; i++) { %>
-            <li><b><%= messages[i].text %></b> by <b><%= messages[i].user %></b> on <b><%= messages[i].added %></b> </li>
+            <li>
+                <b><%= messages[i].text %></b> by <b><%= messages[i].user %></b> on <b><%= messages[i].added %></b>
+                <a href="<%= `/message/${i}` %>">Open</a>
+            </li>
         <% } %>
     </ol>
 </body>
