@@ -7,10 +7,13 @@
 </head>
 <body>
     <h1><%= title %></h1>
-    <ul>
+    <nav>
+        <a href="/new">New Message</a>
+    </nav>
+    <ol>
         <% for (let i=0; i < messages.length; i++) { %>
             <li><b><%= messages[i].text %></b> by <b><%= messages[i].user %></b> on <b><%= messages[i].added %></b> </li>
         <% } %>
-    </ul>
+    </ol>
 </body>
 </html>
